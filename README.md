@@ -27,3 +27,7 @@ git push -u origin staging
 
 
 1. Copy wordpress sites from trellis/group_vars/development/wordpress_sites.yml to trellis/group_vars/staging/wordpress_sites.yml and trellis/group_vars/production/wordpress_sites.yml
+
+
+2. Update trellis/ansible.cfg to add 'vault_password_file = .vault_pass' to [defaults]
+
