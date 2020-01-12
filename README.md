@@ -54,4 +54,4 @@ switch user by typing in  su - new_user_name and then test the privileges by typ
 
 13. Provision server with ansible-playbook server.yml -e env=<environment> 
   
-14. Deploy.
+14. Deploy with ansible-playbook deploy.yml -e "site=staging.mysite.co.uk env=staging" -i hosts/staging
