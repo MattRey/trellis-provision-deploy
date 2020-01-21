@@ -4,16 +4,23 @@ Step-by-step for initial Trellis provision and deploy
 Set up Git repository with master and staging branch:
 
 In local project folder (with trellis and site folders):
-
+```
 git init
 
 git add .
 
 git commit -m "First Commit"
 
+git remote add origin 'remote repository url'
+
+git remote -v
+
 git push -u origin master
+```
 
+If you need a staging branch too:
 
+```
 git branch staging
 
 git checkout staging
@@ -23,7 +30,7 @@ git add .
 git commit -m "First Staging Commit"
 
 git push -u origin staging
-
+```
 
 
 1. Copy wordpress sites from trellis/group_vars/development/wordpress_sites.yml to trellis/group_vars/staging/wordpress_sites.yml and trellis/group_vars/production/wordpress_sites.yml - can remove the redirects from staging becuase they are not needed. Add the ssh link to github repo and the two branches created above. Enable ssl from letsencrypt.
