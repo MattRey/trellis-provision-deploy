@@ -62,3 +62,21 @@ switch user by typing in  su - new_user_name and then test the privileges by typ
 13. Provision server with ansible-playbook server.yml -e env=<environment> 
   
 14. Deploy with ansible-playbook deploy.yml -e "site=staging.mysite.co.uk env=staging" -i hosts/staging and ansible-playbook deploy.yml -e "site=mysite.co.uk env=production" -i hosts/production
+
+To merge changes made on staging branch to master on completion of site:
+
+From staging branch in local (Trellis) folder
+
+```
+git merge master
+
+git checkout master
+
+git merge staging
+
+git add .
+
+git commit -m “comment here …”
+
+git push -u origin master
+```
